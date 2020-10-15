@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94507D03-C680-41E0-87E4-8864064CA2D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>mpeg.My.MyApplication</StartupObject>
+    <RootNamespace>mpeg</RootNamespace>
+    <AssemblyName>MPEG-2 TS packet analyser</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ManifestCertificateThumbprint>81E02BED2435B3CC82E62D578565DF5125CBD944</ManifestCertificateThumbprint>
+    <ManifestKeyFile>mpeg_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>Resources\film-reel.ico</ApplicationIcon>
+    <OptionStrict>Off</OptionStrict>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <SupportUrl>http://www.pjdaniel.org.uk/mpeg/</SupportUrl>
+    <ProductName>MPEG-2 TS packet analyser</ProductName>
+    <PublisherName>Peter Daniel</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.4.5.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MPEG-2 TS packet analyser.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MPEG-2 TS packet analyser.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'test|AnyCPU'">
+    <OutputPath>bin\test\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="dlg\dlgOptions.Designer.vb">
+      <DependentUpon>dlgOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg\dlgOptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg\dlgTableReport.Designer.vb">
+      <DependentUpon>dlgTableReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg\dlgTableReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg\dlgReport.Designer.vb">
+      <DependentUpon>dlgReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg\dlgReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg\dlgDebug.Designer.vb">
+      <DependentUpon>dlgDebug.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg\dlgDebug.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg\dlgSpacing.Designer.vb">
+      <DependentUpon>dlgSpacing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg\dlgSpacing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg\dlgTablePIDs.Designer.vb">
+      <DependentUpon>dlgTablePIDs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg\dlgTablePIDs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="module\declarations.vb" />
+    <Compile Include="module\decode.vb" />
+    <Compile Include="dlg\dlgCheck.Designer.vb">
+      <DependentUpon>dlgCheck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg\dlgCheck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg\dlgGoto.Designer.vb">
+      <DependentUpon>dlgGoto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg\dlgGoto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg\dlgAbout.Designer.vb">
+      <DependentUpon>dlgAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg\dlgAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg\dlgDemux.Designer.vb">
+      <DependentUpon>dlgDemux.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg\dlgDemux.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg\dlgPIDlist.Designer.vb">
+      <DependentUpon>dlgPIDlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlg\dlgPIDlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg\dlgMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlg\dlgMain.Designer.vb">
+      <DependentUpon>dlgMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="module\eit.vb" />
+    <Compile Include="module\read_file.vb" />
+    <Compile Include="module\lookup.vb" />
+    <Compile Include="module\misc.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="module\navigate.vb" />
+    <Compile Include="module\pid_list.vb" />
+    <Compile Include="module\tables.vb" />
+    <Compile Include="module\utc.vb" />
+    <Compile Include="Settings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dlg\dlgOptions.resx">
+      <DependentUpon>dlgOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg\dlgTableReport.resx">
+      <DependentUpon>dlgTableReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg\dlgCheck.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgCheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg\dlgAbout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg\dlgDebug.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgDebug.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg\dlgDemux.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgDemux.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg\dlgGoto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgGoto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg\dlgPIDlist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgPIDlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg\dlgMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg\dlgReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg\dlgSpacing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgSpacing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg\dlgTablePIDs.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dlgTablePIDs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveFirsHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveNextHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MovePreviousHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mpeg_TemporaryKey.pfx" />
+    <BaseApplicationManifest Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </BaseApplicationManifest>
+    <None Include="Resources\List_NumberedHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UtilityText.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ActualSizeHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\textdoc.ico" />
+    <None Include="Resources\film-reel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="change log.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\saveHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="archive\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
