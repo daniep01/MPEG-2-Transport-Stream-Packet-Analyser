@@ -28,7 +28,6 @@ MPEG-2 Transport Stream packet analyser enables decoding and low level analysis 
 * Check TS sync bytes are present and correct (ETR 101 290)
 
 ## Export and Report
-* [Decoder output example](output example.md)
 * [De-multiplex](screenshots/demux.png) transport streams
 * [Trim](screenshots/demux.png) transport streams
 * Convert from 192,204,208 byte streams to a 188 byte stream
