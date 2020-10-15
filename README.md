@@ -22,17 +22,19 @@ MPEG-2 Transport Stream packet analyser enables decoding and low level analysis 
 * Decode Audio Description (AD) pan and fade values and export to CSV
 * Decode PAT, program numbers and program map PIDs
 * Decode TDT, TOT, current date and time
-* Manually add PIDs for PMT decoding using the Table PID list menu
-* Analyse packet spacing
+* [Manually add PIDs for PMT decoding](screenshots/section_pids.png) using the Table PID list menu
+* [Analyse packet spacing](screenshots/pidspacing.png)
 * Check TS packet continuity count compliance on a single PID or the entire stream (ETR 101 290)
 * Check TS sync bytes are present and correct (ETR 101 290)
-* Export and Report
-* De-multiplex transport streams
-* Trim transport streams
+
+## Export and Report
+* [Decoder output example](output example.md)
+* [De-multiplex](screenshots/demux.png) transport streams
+* [Trim](screenshots/demux.png) transport streams
 * Convert from 192,204,208 byte streams to a 188 byte stream
-8 Generate a PID usage report and save as CSV
-* Generate custom CSV reports; TS packet header data, adaptation fields, PES headers, PCR, PTS/DTS, TDT/TOT, table headers, AR, AFD, picture type, GOP structure, Audio Description and more...
-* Generate detailed table reports; table id, sub table id, section length, packet spacing...
+* [Generate a PID usage report](screenshots/pidlist.png) and save as CSV
+* [Generate custom CSV reports](screenshots/report.png); TS packet header data, adaptation fields, PES headers, PCR, PTS/DTS, TDT/TOT, table headers, AR, AFD, picture type, GOP structure, Audio Description and more...
+* [Generate detailed table reports](screenshots/tables_report.png); table id, sub table id, section length, packet spacing...
 
 ## Links and references
 MPEG-2 Transport stream analyser is compliant with the following international standards.
