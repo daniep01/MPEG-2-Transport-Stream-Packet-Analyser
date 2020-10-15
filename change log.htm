@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>MPEG-2 TS packet analyser : change log</title>
+</head>
+<body>
+<h1>
+    MPEG-2 TS packet analyser : Change log</h1>
+<table width = "75%" border="1">
+<tr><th valign="top" style="width: 56px" >Date</th><th valign="top" >Version</th><th valign="top" >
+    Changes and
+    Notes</th></tr>
+<tr><td valign="top" style="width: 56px">
+    01/07/08</td><td valign="top">
+    2.0.0.0</td><td valign="top">
+    <ul><li>Test version</li></ul></td></tr>
+
+    <tr>
+        <td valign="top" style="width: 56px">
+            09/07/08</td>
+        <td valign="top">
+            2.0.0.1</td>
+        <td valign="top">
+    <ul><li>Added video sequence header decoding: hozitonatal size, vertical size, aspect ratio
+    and frame rate. Tested with Mux1 and Sky1.</li></ul></td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 56px">
+        10/07/08</td>
+        <td valign="top">
+            2.0.0.2</td>
+        <td valign="top">
+    <ul><li>Minor GUI changes.</li></ul></td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 56px">
+            11/07/08</td>
+        <td valign="top">
+            2.0.0.3</td>
+        <td valign="top">
+            <ul><li>First public release.</li></ul></td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 56px">
+        </td>
+        <td valign="top">
+            2.0.0.4</td>
+        <td valign="top"><ul>
+            <li>Added new transport stream continuity counter checking feature.</li>
+            <li>Made provision for files that do not start with a sync byte, offsets will be detected.</li>
+            <li>Improved checking routine when opening a file.</li>
+            <li>Added dialogue box for TS header export, user can choose start packet, end packet and enable pid or payload start filters.</li>
+            <li>Enhanced payload start filter on main window, it is now possible to filter on 0 and 1.</li>
+            <li>Minor improvements to PES and AFD viewer</li>
+            <li>Added table_id decoding to main dialogue</li>
+        </ul></td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 56px">
+            21/08/08</td>
+        <td valign="top">
+            2.0.0.5</td>
+        <td valign="top">
+            <ul><li>Fixed a problem with TS files bigger than 2Gb. The largest TS file that can be
+            opened is 2,147,483,647 * 188 byte packets.</li><li>Minor changes to toolbar.</li></ul>
+            </td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 56px">
+        </td>
+        <td valign="top">
+            2.0.0.6</td>
+        <td valign="top">
+            <ul><li>Fixed issue with UTC decoder missing leading '0'</li>
+            <li>Added UTC decoding to TOT</li>
+            <li>Added TDT/TOT export and analysis function, inlcuding packet and time delta information</li>
+            <li>Added Table Header export function</li>
+            <li>Minor UI changes</li></ul></td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 56px">
+            23/12/08</td>
+        <td valign="top">
+            2.0.0.7</td>
+        <td valign="top"><ul><li>Faster decoding (TS packet headers)</li>
+        <li>Added table header decoding for PMT and EIT</li>
+            <li>Added ability to specify multiple PIDs in TableHeader export dialogue</li>
+            <li>Added packet_deta to TSHeader and TableHeader export</li>
+            <li>Added 'current' and 'first' options to Goto dialogue</li>
+            <li>PID search now more robust - checks for sync bytes in every packet</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 56px">
+            19/02/09</td>
+        <td valign="top">
+            2.0.0.8</td>
+        <td valign="top">
+            <ul><li>Added AFD codes 0-7 as defined in TS 101 154</li>
+                <li>Added AFD export feature to track changes in stream</li>
+            </ul></td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 56px">
+            26/02/09</td>
+        <td valign="top">
+            2.0.0.9</td>
+        <td valign="top"><ul><li>Added picture_type decoding and export</li>
+            <li>Added GOP length analysis</li>
+            <li>Added sync byte check feature&nbsp;</li>
+            <li>UI changes to data decoder toolbox, can be docked to the main window and re-sized</li>
+            <li>Internal re-working</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 56px">
+            26/02/09</td>
+        <td valign="top">
+            2.0.0.10</td>
+        <td valign="top"><ul><li>Bug fix : GOP export</li></ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            19/08/09</td>
+        <td valign="top">
+            2.1.0.0</td>
+        <td valign="top"><ul><li>New improved combined CSV report generation tool </li>
+            <li>Added 'stop' button to allow user to abort long searches</li>
+            <li>Added adaptation header and PCR decoding </li>
+            <li>Added additional PES header decoding</li>
+            <li>Added PTS and DTS decoding</li>
+            <li>Added audio description fade/pan decoding&nbsp;</li>
+            <li>Improved goto function</li>
+            <li>Improved continuity check algorithm</li>
+            <li>Improved sync byte check algorithm</li>
+            <li>Internal modifications (navigate and decode modules)&nbsp; </li>
+            <li>User interface now more responsive during long tasks</li>
+            <li>Moved data decoder to main form, viewer can be resized as required</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            25/11/09</td>
+        <td valign="top">
+            2.1.0.1</td>
+        <td valign="top"><ul>
+            <li>Faster sync byte check</li>
+            <li>Faster pid list generation&nbsp;</li>
+            <li>Bug fix : overflow when using very large files</li> </ul></td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            07/12/09</td>
+        <td valign="top">
+            2.1.0.2</td>
+        <td valign="top">
+            <ul><li>Added 'Stop' button to continuiuty count dialogue</li>
+                <li>Added 'Visit website' button to toolbar</li>
+                <li>Bug fix : incorrect conversion applied when checking packet range in 'generate CSV
+                    report' dialogue </li>
+            </ul></td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            06/02/10</td>
+        <td valign="top">
+            2.1.0.3</td>
+        <td valign="top">
+        <ul><li>Improved continuity count check so missing sync bytes are reported</li>
+            <li>Added extra checking for adaptation length</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            26/04/10</td>
+        <td valign="top">
+            2.1.0.4</td>
+        <td valign="top">
+            <ul><li>Fixed adaptation length calculation bug</li></ul>
+        </td>
+    </tr>
+ 
+    <tr>
+        <td style="width: 56px" valign="top">
+        </td>
+        <td valign="top">
+            2.2.0.0<br />
+            Beta 1</td>
+        <td valign="top"><ul><li>Added support for 192, 204 and 208 byte packets</li>
+            <li>Added additional adaptation decoding </li>
+            <li>Added *.m2t and *.m2ts to file open dialogue</li>
+            <li>Added File | Close menu item</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            10/05/10</td>
+        <td valign="top">
+            2.2.0.0</td>
+        <td valign="top"><ul><li>Improved sync byte checking on file open</li>
+            <li>Improved demux of 196, 204, 208 byte streams</li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            22/05/10</td>
+        <td valign="top">
+            2.2.0.1</td>
+        <td valign="top"><ul><li>Fixed problem with adaptation stuffing bytes</li></ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            03/07/10</td>
+        <td valign="top">
+            2.2.0.2</td>
+        <td valign="top"><ul><li>Added table section CRC decoding </li>
+            <li>Added 'from end of file' option to goto dialogue&nbsp;</li>
+            <li>Increased goto packet variable to int32</li>
+            <li>Improved continuity check algorithm</li>
+        </ul>
+            </td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            03/09/10</td>
+        <td valign="top">
+            2.2.0.3</td>
+        <td valign="top">
+        <ul>
+            <li>Added temporal reference and vbv delay</li>
+            <li>Added pes scrambling control bits</li>
+            <li>Added more EIT header decoding</li>
+            <li>Improved continuity count checking report</li>
+        </ul></td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            20/01/11</td>
+        <td valign="top">
+            2.3.0.0</td>
+        <td valign="top"><ul><li>Added PID spacing analysis</li>
+            <li>Added adaptation filter to report generation</li>
+            <li>Added source and output trim functions to demux&nbsp; </li>
+        </ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            10/07/11</td>
+        <td valign="top">
+            2.3.0.1</td>
+        <td valign="top">
+        <ul><li>Improvements to PID spacing analysis</li>
+            <li>Added Save Packet feature</li></ul></td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            04/12/11</td>
+        <td valign="top">
+            2.4.0.0</td>
+        <td valign="top">
+            <ul><li>Added ability to select PIDs for table decoding</li></ul>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            22/12/11</td>
+        <td valign="top">
+            2.4.1.0</td>
+        <td valign="top"><ul>
+        <li>Added ability to change hex viewer byte numbering to start at 1 or 0. Click on index
+            panel to toggle.</li>
+            <li>Added keyboard shortcuts for navigation:
+            
+            <br />PageDown: Next packet
+            <br />PageUp: Prev packet
+            <br />Home: First packet
+            <br />End: Goto packet
+            <br />Escape: Stop search
+            
+            </li>
+            <li>Fixes for 120dpi display modes</li>
+            <li>Improved table pid list gui: press enter to add new pid</li>
+            <li>New options in CSV report</li>
+            <li>New table report</li>
+            
+            </ul>
+            
+            </td>
+    </tr>
+    <tr>
+        <td style="width: 56px" valign="top">
+            09/02/12</td>
+        <td valign="top">
+            2.4.1.1</td>
+        <td valign="top">
+        <ul>
+            <li>Multiple selections now possible in PID lists in demux dialogue </li>
+            <li>Video decode bug fix</li>
+            </ul>
+            </td>
+    </tr>
+        <tr>
+        <td style="width: 56px" valign="top">
+            18/02/12</td>
+        <td valign="top">
+            2.4.1.2</td>
+        <td valign="top">
+        <ul>
+            <li>Faster demux</li>
+            </ul>
+            </td>
+    </tr>
+           <tr>
+        <td style="width: 56px" valign="top">
+            23/12/12</td>
+        <td valign="top">
+            2.4.2.0</td>
+        <td valign="top">
+        <ul>
+            <li>PMT decoder (experimental)</li>
+            <li>Now possible to drag/drop TS files to open</li>
+            <li>Now possible to open a single TS packet </li>
+            
+            </ul>
+            </td>
+    </tr>
+       
+           <tr>
+        <td style="width: 56px" valign="top">
+            13/07/13</td>
+        <td valign="top">
+            2.4.3.0</td>
+        <td valign="top">
+        <ul>
+            <li>Fixed an issue with de-muxing packets which are not 188-bytes long</li>
+            <li>Added DSM-CC table-ids</li>
+            <li>Rebuilt with Visual Studio 2010, now uses .Net 4 or later</li>
+            
+            </ul>
+            </td>
+    </tr>
+
+  <tr>
+    <td style="width: 56px" valign="top">
+      19/07/13
+    </td>
+    <td valign="top">
+      2.4.4
+    </td>
+    <td valign="top">
+      <ul>
+        <li>Added option to convert to 188-byte packets in demux</li>
+        <li>Reworked denux dialogue to be more consistent</li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="width: 56px" valign="top">
+      28/09/13
+    </td>
+    <td valign="top">
+      2.4.5
+    </td>
+    <td valign="top">
+      <ul>
+        <li>Added dec/hex display options</li>
+        <li>Display Options and Table PID list are now saved settings in user.config</li>
+        <li>Improved handling of corrupt sync bytes and broken streams</li >
+      </ul>
+    </td>
+  </tr>
+  
+  <tr>
+    <td style="width: 56px" valign="top">
+        16/12/14</td>
+    <td valign="top">
+        2.4.6</td>
+    <td valign="top">
+        <ul><li>Fix for 192 byte packet demux issue</li></ul>
+        </td>
+  </tr>
+
+      <tr>
+    <td style="width: 56px" valign="top">
+        13/09/15</td>
+    <td valign="top">
+        2.4.7</td>
+    <td valign="top">
+        <ul><li>Fix for PMT elementary PID issue</li></ul>
+        </td>
+  </tr>
+
+          <tr>
+    <td style="width: 56px" valign="top">
+        28/05/16</td>
+    <td valign="top">
+        2.5.0</td>
+    <td valign="top">
+        <ul><li>Added ability to export Audio Description data in CSV file</li>
+            <li>Added ability to toggle packet display between hex and ascii</li>
+        </ul>
+        </td>
+  </tr>
+  
+</table>
+    
+    <h2>Known issues</h2>
+    <p>
+        <ul><li>pointer_field is not fully supported</li>
+        <li>AFD codes and picture type codes are not decoded if they are in a packet where payload start is 0</li>
+    </ul>
+    </p>
+    
+</body>
+</html>
